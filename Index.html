@@ -2,15 +2,90 @@
 <html>
 <head>
     <title>CRUD Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .input-group {
+            margin: 20px 0;
+        }
+        
+        input {
+            padding: 8px;
+            margin-right: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 200px;
+        }
+        
+        button {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        #itemList {
+            list-style: none;
+            padding: 0;
+        }
+        
+        #itemList li {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+        }
+        
+        #itemList li button {
+            margin-left: 10px;
+        }
+        
+        .delete-button {
+            background-color: #f44336;
+        }
+        
+        .delete-button:hover {
+            background-color: #d32f2f;
+        }
+        
+        .edit-button {
+            background-color: #2196F3;
+        }
+        
+        .edit-button:hover {
+            background-color: #1976D2;
+        }
+    </style>
 </head>
 <body>
     <h1>Items</h1>
     <ul id="itemList"></ul>
-
+    
     <h2>Add New Item</h2>
-    <input type="text" id="newItemName" placeholder="Item Name">
-    <button onclick="addItem()">Add</button>
-
-    <script src="script.js"></script> 
+    <div class="input-group">
+        <input 
+            type="text" 
+            id="newItemName" 
+            placeholder="Item Name" 
+            autoFocus="true"
+        >
+        <button onclick="addItem()">Add</button>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
